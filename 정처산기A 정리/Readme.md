@@ -28,7 +28,9 @@ __*이텔릭체*와 두껍게__ 를 혼용할 수도 있습니다.
 [네이버로 이동](https://www.naver.com/)
 
 
-[Image]:(https://dimg.donga.com/wps/NEWS/IMAGE/2018/06/03/90387482.1.jpg) "하트"
+![image](https://github.com/user-attachments/assets/4d865990-4cae-46cf-b376-771f086dbe0b)
+
+"하트"
 
 
 # 구분
