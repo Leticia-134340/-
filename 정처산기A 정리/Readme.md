@@ -28,9 +28,6 @@ __*이텔릭체*와 두껍게__ 를 혼용할 수도 있습니다.
 [네이버로 이동](https://www.naver.com/)
 
 
-![Spill the feels](https://www.pledis.co.kr/artist/detail/seventeen/)
-
-
 
 # 구분
 =====
