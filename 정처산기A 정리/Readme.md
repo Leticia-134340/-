@@ -28,7 +28,10 @@ __*이텔릭체*와 두껍게__ 를 혼용할 수도 있습니다.
 [네이버로 이동](https://www.naver.com/)
 
 
-![대체텍스트](이미지주소)
+![Seventeen]([이미지주소](https://search.pstatic.net/sunny/?src=https%3A%2F%2Fhybecorp.com%2Farchive%2Fx4rBRk0WVD3DYppUb5NJiWs0Fq2JYzPHTwgiJYqLPsMRpU0PHuLff2V5sIMtcGZctgnR9ERXCRElQ7h4B5XjrorMME1OJTQxQrHG493vno67e8plWafagxNals8xwTU8.jpg&type=sc960_832))
+
+
+
 
 # 구분
 =====
