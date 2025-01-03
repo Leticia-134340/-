@@ -1,0 +1,100 @@
+Database
+
+피라미드(역순)
+DATA자료
+INFORMASTON정보
+KNOWLEDGE지식
+WISDOM지혜
+
+잘 정리해서 저장 - 구조화
+정보를 선별, 정리 - 정규화
+
+잘 정리된 정보들을 구조화 시킨 것- 테이블
+이 정보 테이블들의 집합 - 데이터베이스
+CUDR - 생성, 수정, 삭제, 조회
+
+괸계형 데이터베이스
+
+데이터 중복 최소화
+단 데이터가 적을 경우 굳이?
+
+
+Information_schema	: 메타데이터 제공, 데이터베이스정보제공(테이터 열, 행, 인덱스 등)
+Performance_schema	: 시스템 성능 관련정보 제공(쿼리성능, 서버리소스 사용현황, 데기중인 이벤트 등)
+mysql			: 인증정보(사용자 정보, 권한정보 등)
+sys			: Performance_schema, Information_schema 의 분석을 돕기위해 만들어진 DB(여러 View이 포함)
+
+
+
+use mysql;
+show tables;
+select * from user;
+select host, user from user
+
+
+이름: char
+나이: int
+날짜: date
+
+
+표기법
+스테이크: 언더바_
+카멜: 언더바 + 대소문자
+제약조건
+PK: 프라이머리 키 반드시 유일한 값 중복 허용 x, 비어있는 값도 x
+
+CREATE TABLE `test1db`.`tbl_user` (
+  `user_id` VARCHAR(45) NOT NULL,
+  `user_name` VARCHAR(45) NULL,
+  `age` INT NULL,
+  `address` VARCHAR(1024) NULL,
+  PRIMARY KEY (`user_id`));
+
+
+
+
+column 추가: amount int not null
+column 수정: product_pice -> product_price varchar(100) null
+column 삭제: product_details
+
+column 추가: alter table 테이블명 add column 컬럼명 자료형 제약조건
+column 수정: alter table 테이블명 change column 기존컬럼명 변경컬럼명 변경자료형 제약조건
+column 삭제: alter table 테이블명 drop 컴럼명
+
+
+
+create table test2db.tbl_product(
+     prod_id int primary key,
+     prod_name varchar(100) not null,
+     prod_category varchar(10) null,
+     prod_details varchar(1024) null,
+     reg_date datetime not null,
+     prod_price int not null
+
+insert into tbl_product(prod_id,prod_name,prod_category,reg_date,prod_price,amount) values(3001,'이것 이리눅스다','도서',20230122,30000,1000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> desc tbl_product;
++---------------+---------------+------+-----+---------+-------+
+| Field         | Type          | Null | Key | Default | Extra |
++---------------+---------------+------+-----+---------+-------+
+| prod_id       | int           | NO   | PRI | NULL    |       |
+| prod_name     | varchar(100)  | NO   |     | NULL    |       |
+| prod_category | varchar(10)   | YES  |     | NULL    |       |
+| prod_details  | varchar(1024) | YES  |     | NULL    |       |
+| reg_date      | datetime      | NO   |     | NULL    |       |
+| prod_price    | int           | NO   |     | NULL    |       |
+| amount        | int           | NO   |     | NULL    |       |
++---------------+---------------+------+-----+---------+-------+
+값 추가
+
+
+
+
+alter table test2db.tbl_user add column gender char(1) null after age;
+
+
+
+insert into tbl_user(user_id,user_name,age,gen) values('aaa','홍길동',11,'M');
+
+ㅍupdate tbl_user set user_name='김범수',gender='W'where user_id='bbb';
