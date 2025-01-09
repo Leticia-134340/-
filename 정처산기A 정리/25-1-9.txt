@@ -1,0 +1,114 @@
+ls -1 자세히 보기
+ls -
+ls -Ral 하위 폴더 포함 모든 폴더 자세히 보기
+
+
+상위 하위 폴더 소유 
+
+mkdir 폴더 만들 때 만들어려는 폴더는 마지막 폴더이기 때문에 그냥 mk /home/a/b/c로 하면
+오류가 난다
+mmk -p /home/a/b/c하면 상위 폴더를 포함해서 모든 폴더가 만들어진다
+man mkdir 도움말
+touch ./2 문서 만들기 (touch 2 도 가능)
+touch /touch/3 /touch/4 /touch/5 문서 여러개 만들기
+touch 6 7 8 도 가능 (현재 위치에다가 문서 만들기)
+
+cp /touch/1 /cptest/1
+터치 폴더의 1번 문서를 cptest문서로 복사
+맨 뒤에 문서 이름을 적지 않으면 원본의 파일 이름을 따라간다
+자기가 하고 싶은 이름을 맨 뒤에 적으면 그대로 이름이 변경되어서 복사된다
+cp -p /touch/2 /cptest/p2
+속성까지 그대로 복사
+cp -r /touch/b /cptest/bbb
+문서와 
+폴더까지 복사
+
+
+
+문제 1번
+1
+mkdir /final
+cd /final
+touch 12 34 56
+ls
+
+2
+touch -t 199901011200 34
+ls -l
+
+3
+mkdir /back
+cp /final/12 /final/56 back
+ls
+
+4
+cp -p /final/34 /back
+ls
+
+문제2
+1
+mkdir /backup
+cp /etc/login.defs /etc/passwd /boot/grub2/grub.cfg /backup
+ls 
+
+2
+mkdir /backup/test
+cd /backup
+ls
+cp login.defs test/login
+cp passwd test.pass
+cp grub.cfg test/grub
+
+3
+touch /backup/test1 /backup/test/test2
+ls
+
+4
+mkdir -p /home/test/c/d
+cp -r backup/test home/text/c/d/linux
+
+5
+cd /home
+ls -l
+
+cp -p /backup/grub.cfg /backup/login.defs /backup.passwd /backup/test1 /home/test/c/d/linux
+
+
+
+
+파일 바로 지우기는 
+rm -rf
+문서 바로 지우기는 
+rm -r
+
+
+cat 명령어- 문서 전체 출력
+head 명령어는 위에서부터 10줄
+tail 명령어는 아래에서 10줄
+more 명령어는 화면크기 만큼 출력
+
+조건부 실행
+&&
+왼쪽 명령어가 잘 실행이 되면 오른쪽도 실행
+왼쪽 명령어가 실행이 안되면 오른쪽도 실행이 안됨
+
+||
+왼쪽 명령어가 실행되면 오른쪽은 실행 하지 않는다
+왼쪽이 실행 안되면 오른쪽이 실행된다
+
+
+물음표 - 길이
+
+Stream: 물줄기, 시냇물(단방향성)
+데이터의 논리적 이동통로
+
+Re + Direction = ReDirection
+다시 + 방향 = 방향을 다시 정하다
+
+키보드로 입력한 내용을 화면에 출력하지 않고 파일로 저장하는 것
+또는 키보드로 입력 해야하는 내용을 파일로 대체하는 것
+
+
+
+
+
