@@ -1,0 +1,199 @@
+vi 일종의 메모장
+vi 쳤을 때 나오는 창은 텅 빈 메모장과 같은 상태
+vi 종류
+편집 a i o s - 
+실행 : , / - 저장wq 종료q! set number set nonumber
+이동esc - 커서 h j k l, 단어 w e b, 행 0 $, 페이지ctrl + f b...etc 이동, 삭제 x, dd 복붙 yy p
+쉬프트 콜론은 커서 밑으로
+q는 나가기
+u는 되돌리기
+:q로 안나가질 경우 :q!로 나가기
+wq 저장 후 나가기
+
+권한: 권력 한계 (힘의 범위)
+
+(소유)
+
+소유물 - 파일/디렉토리
+
+
+권한
+소유권 - 허가권을 부여할 수 있는 권한 자기자신도 포함
+보통 계정에 소유권이 부여된다 사용자계정/그룹계정/서비스계정
+허가권 - 자원(파일/디렉토리)에 대한 접근 제한
+
+
+drwxr-xr-x.  2 root root      220 10월  2  2020 yum.repos.d
+rwx	 		r-x 		r-x
+소유한 계정에 대한 허가권	그룹 권한		소유자x 그룹x인 사람의 허가권
+허가권
+	root	 	root
+소유한 사용자 이름 	소유한 그룹 계정(여러 사용자 계정이 묶인 것)
+소유권
+
+r(read): 읽기
+w(write): 쓰기
+x(execute): 실행
+
+파일에 부여하는가 디렉토리에 부여하느냐에 따라 달라짐
+파일
+r(내용보기): cat, head, tail more ..
+w{내용수정): vi , >
+x(실행파일): ./cmd\
+
+디렉토리
+r(폴더 안 목록보기): ls 
+w(폴더 내 생성, 수정, 삭제): touch, cp. mv, rm, ...
+x(폴더 내 진입권한): cd
+
+rwxr_xr_x : Symbolic 방식
+755: Numeric 방식
+
+r	w	x
+4	2	1
+rwx - 4+2+1
+r_x - 4+1
+r_x - 4+1
+
+-----------
+미니문제
+-----------
+rw_r_xr__	-> 654
+rwxr__r_x	->745
+r__rwxr__	->474
+r_xr__r_x	->545
+r__r_x___	->450
+
+755	->rwxr_xr_x
+644	->rw_r__r__
+701	->rwx_____x
+542	->r_xr___w_
+643	->rw_r___wx
+375	->_wxrwxr_x
+
+집 : 큰방, 부엌 내방 거실
+d rwxrwxr-x 아빠 가족(아,엄,나,동) 집
+아빠와 가족 다 집 둘러보고 물건을 바꾸고 움직일 수 있다
+하지만 친구는 보고 움직이기만 가능
+
+x(폴더 내 진입권한): cd
+r(폴더 안 목록보기): ls 
+w(폴더 내 생성, 수정, 삭제): touch, cp. mv, rm, mkdir ...
+
+
+u+,- rwx : 소유권자 권한변경 
+g+,- rwx : 소유그룹 권한 변경
+o+- rwx  : other 권한 변경     
+a +,- rwx  : 모두 권한 변경
+
+user10,user20,user30 생성상태에서 진행
+
+1. /perm 디렉토리 생성
+mkdir /perm
+
+2. /perm 소유자계정 user30, 소유그룹 계정 user20 으로 소유권변경
+chown user30:user20 /perm
+
+3. /perm 디렉토리에 user10 은 접근가능,목록보기가능,파일생성불가 허가권부여
+r-x 5
+
+4. /perm 디렉토리에 user20 은 접근가능,목록보기불가,파일생성가능 허가권부여
+-wx 3
+
+5. /perm 디렉토리에 user30 은 접근불가,목록보기불가,파일생성불가 허가권부여
+--- 0
+chmod 035 /perm
+6. /peorm 디렉토리에 user30 이 test파일을 만들고 그안에 'testfile' 내용을 저장
+chmod u=rwx /perm
+
+[user30@localhost perm1]$ cat > test
+testfile
+^C
+
+7. user30계정으로 /perm/test의 파일의 허가 범위를 다음과 같이 지정
+
+user30:읽기,쓰기 가능(rw-), user20:읽기불가 쓰기가능(-w-), 나머지계정 :읽기가능 쓰기불가(r--)
+chown :user20 /perm/test
+chmod 624 /perm/test
+
+		파일		디렉토리(폴더)
+r		문서내용보기	디렉토리 내 목록보기
+w		문서내용수정	디렉토리 내 파일생성수정삭제
+x		실행파일동작	디렉토리 진입
+ 
+
+계정: 인증과 		권한부여(소유권, 허가권 부여)의 도구
+       (Authentication)	(Permission)
+
+
+: 시스템 내에서 등록된 사용자 임을 확인
+: ID/PW, 지문인증, 홍채인증 ...
+: ID를 확인(식별)
+: PW의 일치여부 확인(인증)
+(e.g. ID/PW)
+인증+ 허가 = 인가
+(Authorization)
+
+리눅스 계정관련 파일
+
+계정 생성 시 필요한 정보 저장 파일
+/etc/login.defs     -> /etc/default/useradd
+계정의 보안관련 설정   계정 경로 관련 설정
+(패스워드관련설정 다수)  (계정 개별 Home디렉토리경로)
+		       (계정 Skel 경로 설정)
+
+
+계정 생성 요청 이후 해당 계정의 개별 정보
+
+/etc/passwd	사용자의 기본정보 저장
+계정명, UID, GID, 개별홈 D경로, 쉘종류
+/etc/shadow	암호화된 패스워드 저장
+
+/etc/group	그룹계정 정보저장
+
+
+/home/개별홈디렉토리   개별 계정마다 부여되는 작업공간
+
+
+/var/spool/mail/개별메일파일   개별 임시 메일함
+
+
+
+보안
+기밀성 외부로 유출되어도 원래 내용이 뭔지 모르도록 하는 성질  암호화<-> 복호화(암호 푸는 작업)
+무결성 데이터의 훼손 방지
+가용성
+
+
+$6	- 해시 알고리즘 종류
+$Baq8uafS- Salt값
+
+$brkqH6T5wm28l24npzc46/FDhA/NMrwLIHceadkoc.djTmbdgWB6xq/UulISjlLKrF3JeTxCFyPEl5UXSj.
+- Salt값 + 평문 password -> 해시 알고리즘 -> 해시값
+
+무결성 알고리즘의 특징: 단방향성(복호화 불가)
+
+userdel -r 계정명 : 계정 삭제
+
+
+
+1. test10 계정 생성시 UID 값 1800 으로 지정
+useradd -u 1800 test10
+2. test20 계정 생성시 주그룹을 test10 으로 지정
+useradd -g test10 test20
+3. test30 계정 생성시 보조그룹 test10 추가
+useradd -G test10 test30
+4. test40 계정 생성시 홈디렉토리 경로를 /export/test40 으로 지정
+mkdir /export
+useradd -d /export/test40 test40
+5. test50 계정 생성시 스컬경로를 /skel2 로하고 test50홈디렉토리에 test50파일
+이 생성되도록 하세요
+cp -r /etc/skel2/test50
+touch /skel2/test50
+useradd -mk /skel2 test50
+6. test60 계정 생성시 쉘을 /bin/ksh 로 설정 
+useradd -s /bin/ksh test60
+
+
+
+
