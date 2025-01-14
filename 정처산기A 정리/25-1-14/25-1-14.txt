@@ -1,0 +1,60 @@
+git
+분산형 버전 관리 시스템
+파일을 수정 저장 백업 등을 하는 것을 버전 관리라고 한다
+
+버전관리 : 파일 변화를 시간에 따라 기록했다가 나중에 특정 시점의 버전을 다시 꺼내올 수 있는 시스템
+
+-이전 상태로 복구 가능
+-프로젝트를 통째로 이전 상태로 복구 가능
+-시간에 따라 수정 내용 비교 가능
+-문제를 이르킨 사람 추적 가능
+-누가 언제 만들어낸 이슈인지도 알아낼 수 있다
+-파일 유실 시 쉽게 복구 가능
+
+다운로드 후 계속 next만 누르면 됨
+
+head 작업 중인 브랜치
+버전이 기록되는 거 - brach
+hook git에서 발생하는 이벤트에 대해 자동으로 실행할 스크립트 파일을 담고 있는 파일
+
+hard 그동안 작업한 거 다 날아감
+이전버전으로 가면서 했던거 날림
+
+git config --global
+git init  초기파일 생성
+git add SA에 WD 변경사항 저장
+git commit -m COMMIT 시점 지정(버전기록)
+git reset (이전 버전으로 돌아가기)
+
+--hard		WD(x)	SA(x)	HEAD(이동)
+--soft		WD(o)	SA(o)	HEAD(이동)
+--mixed		WD(o)	SA(x)	HEAD(이동)
+
+
+0 새폴더에서 git init 명령어 사용
+1 aaa.txt 파일을 추가하고 내용입력(아무거나) 
+2 SA 에 추가후 Commit(message V0.0)
+2 bbb.txt 파일을 추가하고 내용입력(아무거나) 
+3 SA 에 추가후 Commit(message V0.1)
+4 ccc.txt 파일을 추가하고 내용입력(아무거나) 
+5 SA 에 추가후 Commit(message V0.2)
+6 V0.0으로 --hard 옵션 이동(확인)
+7 원점 복귀
+8 V0.1로 --soft옵션 이동(확인)
+9 V0.2로 복귀(reflog)
+10 V0.0으로 --mixed옵션 이동(확인 - WD/SA/HEAD)
+
+파일 생성 
+echo "aaa" > aaa.txt
+echo "bbb" > bbb.txt
+echo "ccc" > ccc.txt
+
+github : git의 기능을 웹사이트로 구현
+git push: 업로드
+git clon: 다운로드
+git petch, pull: 수정
+
+네트워크 2문제
+개발환경구축 과정 이미지 ppt
+db erd 구축
+
