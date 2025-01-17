@@ -1,0 +1,14 @@
+이클립스 설정
+
+file - switch workspace - other - 새 파일 만들기 - 폴더 선택 - 확인
+
+켜진 이후
+
+file - new - other - server 검색 - tomcat - 9.0 버전 - 디렉토리 설정: program files - software fondation - tomcat9.0 선택 - 숫자 8091 8090으로 변경 후 저장
+
+새 항목 만들기
+
+file - new - dynamicweb project - 이름 넣고 생성 - 항목 이름 우클릭 - properties - build path로 버전 확인 - project facets - 버전11로 바꾸고 저장 - server - tomcat 선택 후 저장
+
+lib에 문서 2개 넣기 - webapp에서 자바 문서 만들기 - 
+
