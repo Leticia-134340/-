@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+  <diagram name="페이지-1" id="_JCvWgd36WqDC8FAzV10">
+    <mxGraphModel dx="2261" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AaT-vUlCo8BSxvs_euau-1" value="회원" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="160" y="680" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-2" value="전문가(공연)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="-290" y="680" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-3" value="관리자" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="680" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-4" value="인증" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="-410" y="760" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-5" value="공지" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="-410" y="1000" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-6" value="회원가입&lt;div&gt;로그인&lt;/div&gt;&lt;div&gt;로그아웃&lt;/div&gt;&lt;div&gt;탈퇴&lt;/div&gt;&lt;div&gt;전문가 전환&lt;/div&gt;&lt;div&gt;개인정보 수정&lt;/div&gt;&lt;div&gt;개인정보 조회&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="160" y="720" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-7" value="&lt;div&gt;사이트 공지 조회&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="950" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-8" value="&lt;div&gt;공연 공지 조회&lt;/div&gt;&lt;div&gt;공연 공지 수정&lt;/div&gt;&lt;div&gt;공연 공지 삭제&lt;/div&gt;&lt;div&gt;사이트 공지 조회&lt;/div&gt;&lt;div&gt;사이트 공지 등록&lt;br&gt;&lt;div&gt;사이트 공지 수정&lt;/div&gt;&lt;div&gt;사이트 공지 삭제&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="610" y="950" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-9" value="회원가입&lt;div&gt;로그인&lt;/div&gt;&lt;div&gt;로그아웃&lt;/div&gt;&lt;div&gt;탈퇴&lt;/div&gt;&lt;div&gt;회원 전환&lt;/div&gt;&lt;div&gt;개인정보 수정&lt;/div&gt;&lt;div&gt;개인정보 조회&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="720" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-10" value="공연 공지 조회&lt;div&gt;사이트 공지 조회&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="160" y="950" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AaT-vUlCo8BSxvs_euau-11" value="회원가입&lt;div&gt;로그인&lt;/div&gt;&lt;div&gt;로그아웃&lt;/div&gt;&lt;div&gt;탈퇴&lt;/div&gt;&lt;div&gt;전문가 전환&lt;/div&gt;&lt;div&gt;개인정보 수정&lt;/div&gt;&lt;div&gt;개인정보 조회&lt;/div&gt;&lt;div&gt;회원 탈퇴&lt;/div&gt;&lt;div&gt;회원 경고&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="720" width="150" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
