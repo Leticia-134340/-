@@ -1,0 +1,16 @@
+조건: 영어 대소문자 8자리 이상
+oninvalid: 사건 발생 시 메세지
+div span: 선택자
+,: 그룹 선택
+
+clamp - 최소 선호 최댓값 순으로 지정
+
+일반적
+rem+ 미디어쿼리
+vw + rem + min/max width/height
+
+px to vw px tp vh
+
+sans-serif: 맑은 고딕
+
+폰트 사이트: pretendard
