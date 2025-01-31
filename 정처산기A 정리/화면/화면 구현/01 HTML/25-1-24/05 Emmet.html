@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자식요소 선택 : '>' -->
+
+    <!-- div>ul>li -->
+     <div>
+        <ul>
+            <li></li>
+        </ul>
+     </div>
+    <!-- div>p>ul>li -->
+     <div>
+        <p>
+            <ul>
+                <li></li>
+            </ul>
+        </p>
+     </div>
+    <!-- 형제노드 : '+' -->
+    <!-- div>ul>ol -->
+       <div>
+        <ul class="ol"></ul>
+       </div>
+       <!-- div>p+div+span -->
+       <div>
+        <p></p>
+        <div></div>
+        <span></span>
+       </div>
+
+       <!-- div>ul>li>a+ul -->
+        <div>
+            <ul>
+                <li>
+                    <a href=""></a>
+                    <ul></ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 상위태그로 이동 : '^' -->
+         <!-- div>ul>li^p -->
+         <div>
+            <ul>
+                <li></li>
+            </ul>
+            <p></p>
+         </div>
+
+         <!-- 메뉴구조 만들기 -->
+          <!-- div>ul>li>a{mainmenu $} -->
+           <div>
+            <ul>
+                <li>
+                    <a href="">mainmanu 1
+                        <ul>
+                            <li>submenu 1</li>
+                            <li>submenu 2</li>
+                            <li>submenu 3</li>
+                            <li>submenu 4</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+           </div>
+
+        <!-- 메뉴구조 - 여러개 -->
+        div>ul>li>a{mainmanu $}>ul>li*4{submenu $}
+
+
+        <!--  클래스 선택자 : "." -->
+          <!-- .c1 -->
+          <div class="c1"></div>
+          <!-- div class="abc" -->
+
+          <div class="abc"></div>
+
+        <!-- ID 선택자 : "#" -->
+         <div id="wrapper">
+         </div>
+
+
+         <!-- attr 추가 -->
+        <div>
+            <ol>
+                <li>menu_1</li>
+                <li>menu_2</li>
+                <li>menu_3</li>
+                <li>menu_4</li>
+            </ol>
+        </div>
+
+        <div>
+            <div>
+                <ol type="I">
+                    <li>menu_1</li>
+                    <li>menu_2</li>
+                    <li>menu_3</li>
+                    <li>menu_4</li>
+                </ol>
+            </div>
+
+
+            <div>
+                <ol type="I" data-name="비타500">
+                    <li>menu_1</li>
+                    <li>menu_2</li>
+                    <li>menu_3</li>
+                    <li>menu_4</li>
+                </ol>
+            </div>
+
+            <!-- 시작메뉴 선택 -->
+             <div>
+                <ul>
+                    <li>text 5</li>
+                    <li>text 6</li>
+                    <li>text 7</li>
+                    <li>text 8</li>
+                    <li>text 9</li>
+                    <li>text 10</li>
+                    <li>text 11</li>
+                    <li>text 12</li>
+                </ul>
+            </div>
+
+             <!-- 문서 전체 구조 Emmet 만들기 -->
+
+             <div class="warpper">
+                <header>
+                    <div class="top-header"></div>
+                    <nav>
+                        <ul class="main-menu">
+                            <li>
+                                <a href="">1_mainmenu</a>
+                                <ul>
+                                    <li><a href="">1_submenu</a></li>
+                                    <li><a href="">2_submenu</a></li>
+                                    <li><a href="">3_submenu</a></li>
+                                    <li><a href="">4_submenu</a></li>
+                                    <li><a href="">5_submenu</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">2_mainmenu</a>
+                                <ul>
+                                    <li><a href="">1_submenu</a></li>
+                                    <li><a href="">2_submenu</a></li>
+                                    <li><a href="">3_submenu</a></li>
+                                    <li><a href="">4_submenu</a></li>
+                                    <li><a href="">5_submenu</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">3_mainmenu</a>
+                                <ul>
+                                    <li><a href="">1_submenu</a></li>
+                                    <li><a href="">2_submenu</a></li>
+                                    <li><a href="">3_submenu</a></li>
+                                    <li><a href="">4_submenu</a></li>
+                                    <li><a href="">5_submenu</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">4_mainmenu</a>
+                                <ul>
+                                    <li><a href="">1_submenu</a></li>
+                                    <li><a href="">2_submenu</a></li>
+                                    <li><a href="">3_submenu</a></li>
+                                    <li><a href="">4_submenu</a></li>
+                                    <li><a href="">5_submenu</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <main>
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                </main>
+                <footer></footer>
+             </div>
+
+             <div class="warpper">
+                <header>
+                    <div class="top-header"></div>
+                    <nav></nav>
+                </header>
+                <main>
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                </main>
+                <footer></footer>
+             </div>
+
+
+
+
+</body>
+</html>
