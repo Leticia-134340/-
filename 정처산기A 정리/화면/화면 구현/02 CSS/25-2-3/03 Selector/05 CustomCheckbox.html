@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type="checkbox"]{
+            /* display: none; : 원래 만든 체크박스를 안보이게 만들고 이미지 넣은 체크박스를 체크박스처럼 보이게 함 */
+            display: none; 
+        }
+
+        input[type="checkbox"]+label{
+            display: inline;
+            width: 20px;
+            height: 20px;
+            border: 1px solid;
+            margin-right: 5px;
+        }
+
+        input[type="checkbox"]:checked+label{
+            background-color: lightgrey;
+            background-image: url('./05chk.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 15px 15px;
+        }
+        .chk-block{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="chk-block">
+        <input type="checkbox" id="chk">
+        <label class="check-label" for="chk"></label>
+        <span>체크박스</span>
+    </div>
+
+
+</body>
+</html>
