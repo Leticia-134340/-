@@ -1,0 +1,47 @@
+ul.main-menu>li*4>a[href="javascript:void(0)"]{$_mainmenu}+ul.sub-menu>li*5>a{$_submenu}
+
+
+
+
+        /* sub1-menu */
+        .wrapper>header>nav>ul.main-menu>li>ul.sub1-menu{
+            border : 1px solid yellow;
+            width:100%;
+            height:100%;
+            line-height:50px;
+            text-align:center;
+            position: relative;
+        }
+        .wrapper>header>nav>ul.main-menu>li>a{
+            background-color: yellowgreen;
+            display:block;
+        }
+        /* sub2-menu */
+        .wrapper>header>nav>ul.main-menu>li>ul.sub1-menu>li>ul.sub2_menu{
+            background-color: royalblue;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100%;
+
+            display: none;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub1-menu>li>ul.sub2_menu{
+            border : 1px solid blueviolet;
+            
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub1-menu>li>ul.sub2_menu>a{
+            background-color: orange;
+            display: block;
+          
+        }
+        /* hover event */
+        .wrapper>header>nav>ul.main-menu>li>ul.sub1-menu>li:hover>ul.sub2_menu{
+            display: block;
+        }
+
+
+
+<ul class="sub2-menu">
+                                    <li><a href="javascript:void(0)">1-1_submenu</a></li>
+                                    </ul>
