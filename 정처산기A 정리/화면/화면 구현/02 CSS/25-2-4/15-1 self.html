@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            padding-bottom: 10px;
+        }
+        .btn{
+            display: block; 
+            background-color: #29C3FF;
+            color: white;
+            width: 90px;
+            height: 30px;
+            text-align: center;
+            border-radius: 7px;
+        }
+        .btn-primary{ 
+            width: 200px;
+            height: 45px;
+            font-size: 1.5rem;
+            }
+            .btn-primary2{
+                line-height: 30px;
+                float: right;
+            }
+            .btn-primary1{
+                line-height: 30px;
+                float: right;
+                margin-left: 10px;
+                
+            }
+            input{
+                height: 20px;
+                font-size: 15px;
+                border-top: none;
+                border-left: NONE;
+                border-right: none;
+            }
+            label{
+                font-size: 19px;
+            }
+            a{
+                text-decoration-line: none;
+            }
+
+    </style>
+</head>
+<body>
+    
+    <form action="/test.jsp" method="get" class="mt-5">
+        <div>
+            <img width="180px" src="./IMAGES/artshub logo.png" alt=".logo">
+        </div>
+        <div>
+            <label for="">닉네임</label>
+        </div>
+        <div>
+            <input type="text" placeholder="닉네임">
+        </div>
+        <div>
+            <label for="email">이메일</label>
+        </div>
+        <div>
+            <input type="email" placeholder="이메일" required>
+            <a href="javascript:void(0)" class="btn btn-primary1">인증하기</a>
+        </div>
+        <div>
+            <label for="">아이디</label>
+        </div>
+        <div>
+            <input type="text" name="userid" placeholder="아이디"
+            pattern="^([a-zA-Z])([0-9]).{4,12}$" 
+                name="userid" 
+                oninvalid="this.setCustomfsdfsValidity('4자 이상 12자 이하 영문소문자 혹은 대문자, 숫자를 1개 이상 포함하셔야됩니다.')"
+                required>
+            <a href="javascript:void(0)" class="btn btn-primary2">중복확인</a>
+        </div>
+        <div>
+            <label for="">비밀번호</label>
+            </div>
+            <div>
+                <input type="text" placeholder="비밀번호 입력" 
+                type="text" 
+                pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$" 
+                name="password" 
+                oninvalid="this.setCustomfsdfsValidity('8자 이상 25자 이하 영문소문자 혹은 대문자, 숫자를 1개 이상 포함하셔야됩니다.')"
+                required>
+             <!-- ^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$ 
+             ^: 시작
+             $: 끝
+             (): 하나의 식(묶는 단위)
+             {8,25}: 길이(8자 이상 25자 이하)
+             ?=: 전방 탐색
+             .: 모든문자(길이1)
+             *: 모든 문자(길이 제한 없음)
+             [a-zA-Z]: 알파벳 a-z or A-Z 까지 탐색
+             [0-9]: 숫자 0-9까지 탐색 -->
+                
+            </div>
+        <div>
+            <label for="" class="col-3"></label>
+            <input type="password" 
+            name="re-password" 
+            class="col form-control" 
+            placeholder="비밀번호 확인">
+        </div>
+         <div>
+            <button class="btn btn-primary">회원 가입</button>
+        </div>
+    </FORM>
+</body>
+</html>
