@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{box-sizing: border-box;}
+        body{margin: 0;}
+        .slider-block{
+            width: 1280px;
+            height: 300px;
+            margin: 50px auto;
+            border: 1px solid;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+        }
+        .slider-block>.slider-wrapper{
+            height: 150px;
+            width: 3000px;
+            border: 1px solid;
+
+            display: flex;
+            align-items: center;
+            /* justify-content: left; */
+            position: relative;
+
+            animation-name: moving;
+            animation-duration: 25s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .slider-block>.slider-wrapper>.item{
+            width: 200px;
+            height: 150px;
+            border: 1px solid;
+            margin: 10px;
+            background-color: white;
+
+            transition: .3s;
+        }
+        .slider-block>.slider-wrapper>.item>img{
+          width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+        }
+        .slider-block>.slider-wrapper>.item:first-child{
+            margin-left: 0;
+        }
+
+        .slider-block>.slider-wrapper:hover{
+            animation-play-state: paused;
+        }
+
+        .slider-block>.slider-wrapper>.item:hover{
+            transform: scale(1.5);
+        }
+        
+        @keyframes moving{
+            from{left: 0px;}
+            to{left: -2200px;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="slider-block">
+        <div class="slider-wrapper">
+            <div class="item">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/020/655/073/small_2x/beautiful-sky-and-clouds-during-twilight-time-sunset-photo.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://shotkit.com/wp-content/uploads/bb-plugin/cache/Beautiful-sky-photography-lisa-fotios-landscape-5de0f1792eafa6f4ec61153e0b9f95df-zybravgx2q47.jpeg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://c02.purpledshub.com/uploads/sites/41/2020/07/GettyImages_10070316-c-f3dddad-scaled.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://swarajya.gumlet.io/swarajya/2017-04/ed6688f6-e458-4622-a897-89bf7645d9f3/635059main_hubble033012_full_full.jpg?w=610&q=50&compress=true&format=auto" alt="">
+            </div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+        </div>
+    </div>
+</body>
+</html>
