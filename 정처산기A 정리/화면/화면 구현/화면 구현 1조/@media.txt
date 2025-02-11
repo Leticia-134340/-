@@ -1,0 +1,5 @@
+body>main>section>.all>.mypage>.job1
+body>main>section>.all>.mypage>.job1>.job2
+body>main>section>.all>.mypage>.profile
+body>main>section>.all>.mypage>.nik
+body>main>section>.all>.work
