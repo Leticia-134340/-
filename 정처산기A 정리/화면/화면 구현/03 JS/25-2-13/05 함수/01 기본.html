@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 기본 형태(ECMA6 이전)
+        // 1 인자 o 리턴 o
+        function sum1(n1,n2){
+            return n1+n2;
+        }
+        // 2 인자 o 리턴 x 불러낸 곳으로 값을 주지 않음 로그를 찍으면 함수 내에서는 값을 보는게 가능
+        function sum2(n1,n2){
+            console.log('sum2',n1+n2);
+        }
+        // 3 인자 x 리턴 o
+        function sum3(){
+            const n1 = 10;
+            const n2 = 20;
+            return n1+n2;
+        }
+        // 4 인자 x 리턴 x
+        function sum4(){
+            const n1 = 10;
+            const n2 = 20;
+            console.log("sum",n1+n2);
+        }
+
+        const v1 = sum1(10,20);
+        console.log('v1',v1);
+
+        const v2 = sum2(100,200);
+        console.log('v2',v2);
+        
+        const v3 = sum3();
+        console.log('v3',v3);
+
+        // 기본 형태(ECMA6 이후)
+        const f1 = (n1,n2)=>{
+            return n1+n2;
+        };
+        const f2 = (n1,n2)=>{
+            console.log('f2',n1+n2);
+        };
+        const f3 = ()=>{
+            const n1=10;
+            const n2=20;
+            return n1+n2;
+        };
+        const f4 = ()=>{
+            const n1=10;
+            const n2=20;
+            console.log('f4',n1+n2);
+        };
+        console.log('--------------------------------')
+        const v_1 = f1(10,20); console.log('v_1',v_1);
+        const v_2 = f2(10,20); console.log('v_2',v_2);
+        const v_3 = f3(); console.log('v_3',v_3);
+        const v_4 = f4(); console.log('v_4',v_4);
+
+
+        // 인자의 개수? 메모리 허용범위 내에서 무제한
+        // 반환값의 개수? 1개
+
+        const f5 = (n1,n2,n3)=>{
+            return {
+                // 속성
+                arg1: n1,
+                arg2: n2,
+                arg3: n3
+                // 기능
+                // toString : function(){
+                //     console.log(`이름 : ${this.arg1} , 나이 ${this.arg2} , 주소 : ${this.arg3}`)
+                // }
+            }
+        }
+        const v_5 = f5("홍길동",15,"대구");
+        console.log('v_5',v_5);
+        v_5.toString();
+
+        // 가변인자(...args)
+
+        const f6 = (n1,n2,n3, ...args)=>{
+            console.log("n1",n1);
+            console.log("n2",n2);
+            console.log("n3",n3);
+            console.log("args",args);
+        };
+        f6(100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+    </script>
+</body>
+</html>
