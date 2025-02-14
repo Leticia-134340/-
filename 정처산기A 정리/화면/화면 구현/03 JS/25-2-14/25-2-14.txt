@@ -1,0 +1,56 @@
+이름부여: 공간에 대한 문자열 주소가 붙는 것
+
+function customMap(array,func)
+괄호 앞은 배열 뒤는 로직
+
+        function callBackfunc3(array){
+            let tmp = []; //state
+            // inner function
+            function map(logic){
+                for(let i =0;i<array.length;i++){
+                const item = array[i];
+                const reNewItem = logic(item); //얘가 콜 하는 중
+                tmp.push(reNewItem);
+                }
+                return tmp;
+            }
+
+            return{
+                map : map
+            }
+        }
+        const r_val3 = callBackfunc3(arr)
+맨 밑에줄 실행하면 map:map이 출력된다
+
+        function callBackfunc3(array){
+            let tmp = []; //state
+            // inner function
+            function map(logic){
+                for(let i =0;i<array.length;i++){
+                const item = array[i];
+                const reNewItem = logic(item); //얘가 콜 하는 중
+                tmp.push(reNewItem);
+                }
+                return tmp;
+            }
+
+            return{
+                map : map
+            }
+        }
+        const r_val3 = callBackfunc3(arr).map((item)=>{return {'아이디':item.id,'나이':item.age}});
+function map에 맨 밑에 아이디 나이 리턴 값을 호출
+
+삽입정렬
+키 값을 옆의 숫자와 비교하여 크고 작음에 따라 재배열 시킨다
+
+선택정렬:
+1회차
+가장 왼쪽에 있는 값이 가장 작은 값이 되도록 가장 첫 번째 값과 다른 값들을 비교함
+
+n회차: 회차가 넘어갈 때마다 i값은 늘어나고 이에 따라 j값도 늘어나서 1회차의 절차를 다시 반복한다
+
+ d3El.addEventListener('contextmenu',(e)=>{
+            e.preventDefault();
+            d3El.innerHTML=`<h1>MOUSE_우클릭</h1>`
+우클릭 방지 코드
