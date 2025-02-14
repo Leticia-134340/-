@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="./css/artshub_header.css">
+
+    <style>
+        /* section */
+
+        main>section{
+            justify-items: center;
+            
+        }
+
+        main>section>.all{
+            /* border: 1px solid; */
+            width: 500px;
+            height: 1000px;
+            margin-top: 5%;
+            margin-left: 17%; 
+            
+        }
+
+        main>section>.all>.img>img{
+            margin-bottom: 5%;
+            width: 200px;
+            height: 240px;
+        }
+        main>section>.all>div>label{
+            display: block;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        main>section>.all>div>input{
+            width: 20vh;
+            height: 3vh;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid #bcbcbc;
+
+            font-size: 17px;
+        }
+        
+
+        main>section>.all>div>a{
+            border: 1px solid#29c3ff;
+            border-radius: 7px;
+            background-color: #29c3ff;
+            
+            display: inline-block;
+            width: 8vh;
+            height: 3.5vh;
+            /* text-align: center; */
+            
+        }
+        main>section>.all>div>select{
+            width: 12vh;
+            height: 3.5vh;
+            border-radius: 7px;
+
+        }
+        @media (max-width: 1080px){
+
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <nav class="navi">
+            <ul class="leftside">
+                <li class="logo">
+                    <img class="img-logo" src="./img/로고.png" alt="">
+                    <span class="artshub">Arts hub</span>
+                </li>
+                <ul class="depth1">
+                    <li><a href="javascript:void(0)">Funding</a>
+                        <ul class="depth2">
+                            <li><a href="javascript:void(0)">인기</a></li>
+                            <li><a href="javascript:void(0)">신규</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">Community</a>
+                        <ul class="depth2">
+                            <li><a href="javascript:void(0)">공연 후기</a></li>
+                            <li><a href="javascript:void(0)">작품 이야기</a></li>
+                            <li><a href="javascript:void(0)">자유 게시판</a></li>
+                            <li><a href="javascript:void(0)">정보 공유</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">Project</a>
+                        <ul class="depth2">
+                            <li><a href="javascript:void(0)">참가하기</a></li>
+                            <li><a href="javascript:void(0)">모집하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+            <ul class="rightside">
+                <li><a href="javascript:void(0)">로그인</a></li>
+                <li><a href="javascript:void(0)">회원가입</a></li>
+                <li class="project"><a href="javascript:void(0)">프로젝트 만들기</a></li>
+            </ul>
+            <div class="drop-icon">⋯</div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="all">
+                <div class="img">
+                    <img src="./img/로고.png" alt="">
+                </div>
+                <div>
+                    <label for="">닉네임</label>
+                    <input type="text" name="username" placeholder="닉네임">
+                </div>
+                <div>
+                    <label for="">아이디</label>
+                    <input type="text" name="userid" placeholder="아이디">
+                        <a href="javascript:void(0)">중복확인</a>
+                </div>
+                <div>
+                    <label for="">이메일</label>
+                    <input type="text" name="email" placeholder="이메일">
+                    <select>
+                        <option value="">직접 입력하기</option>
+                        <option value="">@naver.com</option>
+                        <option value="">@daum.net</option>
+                    </select>
+                        <a href="javascript:void(0)">중복확인</a>
+                </div>
+                <div>
+                    <label for="">비밀번호</label>
+                    <input type="password" name="password" placeholder="비밀번호">
+                </div>
+                <div>
+                    <label for=""></label>
+                    <input type="password" name="re-password" placeholder="비밀번호 재확인">
+                </div>
+                <div>
+                    <button>회원 가입</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
