@@ -34,12 +34,19 @@
         // 클로저 이용 상태 관리
         function clickHandler(){
             let cnt=0;
-            function addCnt(){
+            function addCnt(node){
                 cnt++;
+                node.innerHTML=`<h2>클로저내 CNT : ${cnt}</h2>`;
                 console.log("cliked...".cnt);
             }
-            return {addCnt:addCnt};
+            return addCnt;
         }
+        const addCnt = clickHandler();
+        const d2El = document.querySelector('.d2');
+        d2El.addEventListener('click',()=>{
+            addCnt(d2El);
+        console.log(d2El)    
+        });
         // function clickHandler(){
         //     let cnt=0;
         //     function addCnt(){
