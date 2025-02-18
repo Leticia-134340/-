@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 5000px;margin: 0;padding: 0;width: 8000px;">
+
+
+    
+    <script>
+        document.addEventListener('scroll',(e)=>{
+
+            // ------------------------------------------------
+            // 세로 축 확인
+            // ------------------------------------------------
+            // window.scrollY : ViewPort를 기준으로 가장 위쪽 부분의 세로축 위치
+            // console.log('scroll...',window.scrollY);
+            // console.log('scroll...',document.documentElement.scrollHeight); //스크롤이 쓰이는 전체 높이?
+            // console.log('scroll...',document.documentElement.scrollTop);
+
+            // ------------------------------------------------
+            // 가로 축 확인
+            // ------------------------------------------------
+            console.log('scrollX...',window.scrollX);
+            console.log('scrollX...',document.documentElement.scrollLeft);
+            // console.log('scrollX...',document.documentElement.scrollWidth);
+
+        })
+    </script>
+</body>
+</html>
