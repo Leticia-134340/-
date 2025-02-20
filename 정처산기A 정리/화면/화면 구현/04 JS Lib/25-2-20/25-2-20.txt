@@ -1,0 +1,39 @@
+스레드 - 실타래
+
+메인스레드 
+혼자서 모든 일을 처리
+일이 많아질수록 느려짐
+동시 처리 불가
+관련: 자바스크립트
+
+스레드 분활
+스레드를 나누면 한 스레드가 해야할 일이 줄어들고 동시 처리가 가능해진다
+관련: 자바
+
+
+동기(약속)
+-javascript: 절차대로 처리(Main Thread)
+-network: 속도/ 데이터단위/ 혼잡 제어에 대한 약속
+-web server: 한페이지당 한번에 하나의 요청/ 응답 흐름
+비동기
+-javascript: 절차를 지키지 않음(Worker Thread 생성 후 독자적으로 처리 - 실제로 스레드를 나누진 않음)
+-network: 미리 만들어놓은 약속대로 데이터 전송을 하지않고 임의로 지정한대로 전송
+-web server: 한페이지당 여러개의 요청/여러개의 응답(xhr, promise, fetch, ajax, axios...)
+
+스레드: 코드를 처리하는 실행흐름
+
+
+비동기 처리간 우선순위: async(함수의 헤더에 부여), await(함수내 비동기 처리 로직에 부여
+
+스크롤 스파이
+    <script>
+
+        const spyedEl = document.querySelector('.scroll-spy');
+        const ballEl = document.querySelector('.scroll-spy .ball');
+
+        const scrollMagicObj = new ScrollMagic({'감시할요소..옵션'})
+                                    .setClassToggle('효과적용El','class명')
+                                    .addTo(new ScrollMagic.Controller());
+
+    </script>
+
