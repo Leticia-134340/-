@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./JS/중구맛집.js"></script>
+</head>
+<body>
+    
+    <div style="width: 800px;height: 500px;border: 1px solid;margin:0 auto;">
+        <canvas id="myChart"></canvas> <!-- 시각화에 필요한 처리는 대부분 canvas 태그를 쓴다 -->
+      </div>
+
+    <script>
+        console.log('중구맛집',중구맛집);
+
+        // 카테고리 추출(한식, 양식, 중식...), 카테고리별 식당 Cnt
+        function extractDataSet(param){
+
+            const total = param.total;
+            console.log('total',total);
+
+            const data = param.data;
+            // 음식 카테고리 Map
+            const cat = data.map((item)=>{return item.FD_CS})
+                            .sort((a,b)=>{return a.localeCompare(b)})
+                            .reduce((acc,item)=>{
+                                if(acc[item]!==undefined)
+                                    acc[item]++;
+                                else{
+                                    acc[item]=0;
+                                }
+                                return acc;
+                            },{}) //누적 값
+            console.log('cat',cat);
+
+            // keys, values 따로 분류
+            const keys = Object.keys(cat);
+            const values = Object.values(cat);
+            console.log('keys',keys);
+            console.log('values',values);
+
+            return {
+                "keys" : keys,
+                "values" : values
+            }//결과
+        }
+
+        function drawChart(title,obj,tag,type){
+
+                const ctx = document.getElementById(tag);
+            
+                let data = {
+                        labels: obj.keys,
+                        datasets: [
+                            {
+                                label: title,
+                                data: obj.values,
+                                borderWidth: 1,
+                                backgroundColor:[
+                                    'red','orange','yellow','green','blue','navy', 'purple','skyblue'
+                                ],
+                                // borderColor:[
+                                //     'red','orange','yellow','green','blue','navy', 'purple'
+                                // ]
+                            }
+                        ]
+                    };
+                    let options = {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                // max: 100,
+                                // min: 0,
+                                // ticks: {
+                                //     stepSixe: 10
+                            
+                                // }
+                            },
+                            // x:{
+                            //     stacked : true,
+                            //     barPercentage: 1.0,
+                            //     categoryPercentage: 1.0
+                            // }
+                        },
+                        onClick: (event,chartEl)=>{
+                            console.log('clicked..',chartEl);
+                        }
+                        
+
+                    }
+
+                new Chart(ctx, {
+                type: 'pie', //bar, line, pie, doughnut , //bubble, scatter, heatmap
+                data: data,
+                options: options
+                });
+
+        }
+
+        const result = extractDataSet(중구맛집);
+        console.log('result',result);
+        drawChart('중구맛집',result,'myChart','pie');
+        
+    </script>
+</body>
+</html>
