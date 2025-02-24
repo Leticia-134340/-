@@ -1,0 +1,53 @@
+programming language
+
+pro 	+ 	gram
+-미리,-사전의	쓰다, 적다
+
+사람(개발자)	--컴파일러(통역)--		컴퓨터
+자연어					기계어(0,1)
+if(){
+}
+for(){
+}
+
+
+compute: 계산하다
+computer: 계산기
+
+cpu: 프로세서, 프로그램 처리
+ram: 주기억장치 잠깐 기억
+disk: 보조기억장치 매번 실행해야하는 프로그램들 저장
+실행된 프로그램: 프로세스
+
+JAVA언어: 절차지향문법(c) + 객체지향 문법(c++)
+
+ 단축키
+public static void main(String[] args) - main 입력 후 ctrl + 스페이스
+System.out.println() - syso 입력후 ctrl + 스페이스
+행 복사 - ctrl + alt + 화살표
+
+Data 
+-저장
+--숫자
+---정수
+----양수
+----음수
+---실수
+----float(4byte)
+----double(8byte) - 기본
+--문자
+---단일 문자 'a'
+---문자열 "string"
+-처리
+숫자 나오면 무조건 저장 후 처리
+
+primitive - 원시타입 기본자료형 선 공간 형성
+byte(1byte) /음수양수
+short(2byte) /음수양수
+char(2byte) /양수값만 지원
+int(4byte) - 기본
+long(8byte) /음수양수
+float(4byte) /실수
+double(8byte) /실수(기본)
+
+String - 클래스 자료형 동적 공간 할당
