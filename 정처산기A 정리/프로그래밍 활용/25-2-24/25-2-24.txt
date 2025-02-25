@@ -41,7 +41,7 @@ Data
 -처리
 숫자 나오면 무조건 저장 후 처리
 
-primitive - 원시타입 기본자료형 선 공간 형성
+primitive - 원시타입(c언어에서 가져옴) 기본자료형 선 공간 형성
 byte(1byte) /음수양수
 short(2byte) /음수양수
 char(2byte) /양수값만 지원
