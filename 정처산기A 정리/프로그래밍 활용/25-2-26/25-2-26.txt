@@ -1,0 +1,10 @@
+
+
+키보드(표준입력장치) 	System.in		OS	System.out	모니터(표준출력장치)
+					java app
+					Scanner sc
+					= new Scanner
+					(System.in)
+
+Buffer : 완충제 표준입력장치에서 받아온 값을 한번에 처리하기 위해서 존재함. 속도를 맞추기 위함
+아무것도 없는 값(enter)을 받아오려고 하면 오류가 생긴다
