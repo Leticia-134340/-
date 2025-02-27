@@ -234,7 +234,7 @@ public class c01If {
 //		{
 //			System.out.println("3000원 입니다");
 //		}
-		
+		//위에서 조건을 충족못할 경우 밑으로 내려옴
 
 		
 		

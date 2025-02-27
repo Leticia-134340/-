@@ -28,6 +28,7 @@ public class c02Switch {
 		}
 		System.out.println(ranking + "등 메달의 색은 "+ medalColor + "입니다.");
 	
-	}
+	}		//위에서부터 해당되는 조건을 찾아 출력함
+			//break문을 쓰지 않으면 밑의 조건들을 같이 출력하기 때문에 특별한 경우가 아니면 해야한다/
 
 }
