@@ -1,0 +1,30 @@
+객체 - 클래스
+
+클래스 선언 -> 객체(생성)
+
+속성(멤버 변수)
+기능(멤버 함수)
+생성자
+
+private : 한번 생성하면 수정 불가한 함수
+getter : private 지정된 요소는 다른 곳에서 선택이 불가하기 때문에 여기서 지정해야한다
+setter : private 지정된 요소는 선택이 불가한데 이 함수를 통해서 기존 데이터를 수정 가능하게 한다
+캡슐화 : 굳이 사용자에게 보여줄 필요가 없는 요소를 (동작 과정 등) 외부에 숨기는 특성
+
+str1, str2 : 문자열 상수풀
+
+참조변수 값이 다르다(위치값)
+stack 	|	 heap |	 class
+str1(100			"java" 저장
+str2(100
+str3(29	"java(new)"
+str4(30	"java(new)"
+
+
+시스템 아웃 str$을 하면 다 "java"가 뜨는데 Spring은 해당코드의 문자열을 표시하도록 유도하기 때문
+
+stack 	|		heap		|		class=method
+str1(100)						Jp		
+str2(200)		JP
+str3							JP JP
+str4
