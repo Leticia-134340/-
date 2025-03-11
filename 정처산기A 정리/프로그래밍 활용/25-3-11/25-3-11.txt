@@ -1,0 +1,9 @@
+벡터 형식: 멀티 
+
+equals 값 true로 바꾸기
+업 캐스팅을 다운 캐스팅 해야한다
+
+Map<String, String>
+다 받아낼 수 있다
+Map<String, Object>
+도 다 받아냄
