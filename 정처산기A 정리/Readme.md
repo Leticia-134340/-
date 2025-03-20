@@ -59,7 +59,24 @@
 #### Chart
 25-2-21     MDN 활용<p>
 ## 5. 프로그래밍 활용(Java)
-### 3-6 Static, 싱글 톤 패턴, 상속
+25-2-24     프로그래밍 개념,자바 개념, SystemOut, 진수, 음수, 자료형 <p>
+25-2-25     자료형<p>
+25-2-26     자료형 변환(자동형변환, 강제형변환), 연산식 자료형 변환, 문자열 형변환, Scanner, 연산자<p>
+25-2-27     If, Switch, While<p>
+25-2-28     While 실습(구구단, 별찍기)<p>
+25-3-04     반복문(While, For,기타반복처리, 탈출), 객체지향 (속성, 기능, 변수), MethoodOverloading, 가변인자, 생성자<p>
+25-3-05 클래스, 참조변수, 접근 한정자, 캡슐화, This, String, 배열, 2차원 배열<p>
+25-3-06 Static, 싱글 톤 패턴, 상속, Overrriding<p>
+25-3-07 업캐스팅, 메서드 접근, 다운캐스팅, 다중상속, 추상클래스, 인터페이스<p>
+25-3-10 Object, Wrapper, Date(Local, Simple), 예외처리, Generic(일반화)<p>
+25-3-11 Generic, List, Set, Map,확장자(Properties), Swing<p>
+25-3-12 Swing event(Action, Key, Mouse)<p>
+25-3-13 <p>
+25-3-14 <p>
+25-3-17 <p>
+25-3-18 <p>
+25-3-19 <p>
+
 
 
 ### 제목 3
