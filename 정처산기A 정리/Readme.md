@@ -54,10 +54,10 @@
 25-2-18     키보드 이벤트, 체크박스 이벤트, 표 생성, 스크롤, 반응형(Resize, Domload)<p>
 25-2-19     Node, Form 검색, class 추가, crud, 동기 비동기<p>
 #### JS Lib
-25-2-20     <p>
-25-2-21     <p>
-
-
+25-2-20     Thread, Swiper, Scroll<p>
+25-2-21     Scroll, GSAP, Chart<p>
+#### Chart
+25-2-21     MDN 활용<p>
 ## 5. 프로그래밍 활용(Java)
 ### 3-6 Static, 싱글 톤 패턴, 상속
 
