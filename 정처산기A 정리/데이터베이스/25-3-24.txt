@@ -1,0 +1,58 @@
+--where 절
+desc usertbl;
+select * from usertbl where name='김경호';
+
+--조건절 + 관계연산자
+select * from usertbl where birthyear >=1970 and height>=182;
+select * from usertbl where birthyear >=1970 or height>=182;
+
+--between
+select * from usertbl where birthyear >=1970 and birthyear<=1980;
+select * from usertbl where birthyear  between 1970 and 1980;
+
+--in
+select * from usertbl where addr in('경남','전남','경북');
+select * from usertbl where mobile1 in('010','011');
+
+--like  %(모든문자, 길이제한 x), _(모든문자, _만큼의 길이)
+select name,height from usertbl where name like '김%';
+select name, height from usertbl where name like '_재범';
+
+--null check
+select * from usertbl where mobile1 is null;
+select * from usertbl where mobile1 is not null;
+
+--distinct row 중 중복 row 제거
+select addr from usertbl;
+select DISTINCT addr from usertbl;
+
+--alias 별칭
+select * from usertbl;
+select name,addr, mobile1 || mobile2 from usertbl;
+select name,addr, mobile1 || mobile2 as phone from usertbl;
+
+
+--문제
+select * from buytbl;
+
+--1. 구매량이 5개 이상인 행 출력
+select * from buytbl where amount>=5;
+
+--2. 가격이 50이상 500 이하인 행의 userid와 prodname 출력
+select userid, prodname from buytbl where price>=50 and price<=500;
+
+--3. 구매량이 10이상 또는 가격이 100 이상인 행 출력
+SELECT * from buytbl where amount>=10 or price>=100;
+
+--4. userid가 K로 시작하는 행 출력
+select * from buytbl where userid like 'K%';
+
+--5. '서적'이거나 '전자'인 행 출력
+select * from buytbl where groupname in('서적', '전자');
+
+--6. 상품이 책이거나 userid가 w로 끝나는 행 출력
+select * from buytbl where prodname in('책') or userid like '%W';
+
+
+
+
