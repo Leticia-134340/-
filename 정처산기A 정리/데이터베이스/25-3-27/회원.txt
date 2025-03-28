@@ -1,0 +1,36 @@
+회원
+/user
+crud
+가입 조회 수정 탈퇴
+
+process
+로그인 로그아웃
+
+인증 Endpoint
+
+기능		범위		URI			요청 파라미터			응답형태				설명
+인증		공통		/user			Map<String,Object>		Map<String,Object>		인증서비스입니다(C: 1,R:2...
+
+화원가입 	개별		/user			"ServeiceNo":int
+							"userId": String
+							"username": String
+							"password":String
+
+
+세부
+/use
+
+
+1. SubController - BookController 상속
+2. FrontController 에 API 등록
+3. BookController의 기본코드 구현
+4. 테스트에서 서비스 요청 후 확인
+
+bookcontroller
+ServiceNo1
+
+유효성 체크
+bookcode 8자
+bookname 255자 이하
+
+

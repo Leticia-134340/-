@@ -1,0 +1,23 @@
+도서관리 시스템
+서비스(인증)
+도서 서비스
+대여 서비스
+
+Domain - 액터(관리자, 도서관 사서, 회원)
+
+사용자와 닿아 있는 부분			
+Presentation Layer					Business Layer	Persistance Layer
+View			Controller			Domain
+								model - SERVICE, DTO, DAO
+				
+TUIMAIN		FC->UserController		공통 Domain
+								model - SERVICE, DTO, DAO
+							관리자 Domain
+								model - SERVICE, DTO, DAO
+	
+							사서 	Domain
+								model - SERVICE, DTO, DAO
+	
+							회원 Domain
+								model - SERVICE, DTO, DAO
+
