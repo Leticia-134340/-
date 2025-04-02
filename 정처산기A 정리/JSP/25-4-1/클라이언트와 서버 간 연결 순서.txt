@@ -1,0 +1,13 @@
+Client(View(요청)) -> Server 컴퓨터(Apache + 			Tomcat)
+						.jsp
+						<HTML>
+						...JAVA스트립트코드	-> 	해석가	-> 	JAVA파일 변환(Servlet)	-> 컴파일	-> .JVM	->	동작처리
+						</html>
+
+
+메뉴생성
+이름 받아오기
+
+<%! %>	: 속성/기능 class영역 - 객체지향
+<% %>	: 
+<%= %>
