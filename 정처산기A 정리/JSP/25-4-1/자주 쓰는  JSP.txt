@@ -1,0 +1,36 @@
+자주 쓰는  JSP
+선언문	<%=  %>	서블릿의 속성/기능
+스크립틀릿	<%  %>	서블릿의 service 함수 안
+표현식	<%=  %>	service 함수 안 -> view out.print()
+
+
+지시자	<%@ %>	page import=""
+				include Layout
+
+Forward/Redirect
+			forward : 서버 내 다른 페이지 이동
+				    request / response 유지
+			redirect : 다른 경로로 이동 유도
+				    new request
+
+내장객체 	pageContext / request,response/sesión/
+		${pageContext.requset.contextPath}
+		application
+
+세션
+쿠키
+
+공통점 : 정보저장(임시)
+서버에 저장 : 세션(서버가 종료되면 제거)
+브라우저에 저장 : 쿠키(서버가 종료되어도 유지 maxAge.)
+
+EL : 표현식을 대체
+
+JSTL
+
+DB(중요)
+
+
+C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib
+오라클과 연결하기 위한 파일 경로
+6번

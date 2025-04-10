@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+	Forward 방식 페이지 요청 : Request 내용은 유지한채 또다른 Page 경로로 이동
+	클라이언트의 URL경로는 최초요청시의 URL로 유지가 된다
+	Request 객체의 내용은 최초요청내용이 유지된다(Forward 되는 동안만)
+	
+	하나의 요청-응답 주기를 가진다
+	1에서 4로 실행할 때 도중에 클라이언트에게 값을 요구하지 않고 이어지기 때문에 기존의 값이 유지된다
+ -->
+	
+	<form action="02Page.jsp">
+		<input type="text" name="username"	/><br>
+		<input type="text" name="password"	/><br>
+		<button>전송</button>
+	</form>
+
+</body>
+</html>
